@@ -1,0 +1,6 @@
+{
+  "summary":  "Implementation plan for AURA — Advanced Personal AI Operating System on Android. Details the adaptive 3-pane workstation architecture, 8 specialized AI agents, local Ollama & custom endpoint integration, Room persistent memory and automation engine, and interactive voice mode with animated visualizer.",
+  "updatedAt":  "2026-11-09T10:28:14.768859914Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

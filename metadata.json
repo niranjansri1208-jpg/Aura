@@ -1,0 +1,6 @@
+{
+  "name": "AURA",
+  "description": "Advanced Unified Reasoning Assistant - Personal AI Operating System",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
