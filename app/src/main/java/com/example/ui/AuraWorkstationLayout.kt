@@ -248,6 +248,10 @@ private fun RenderCurrentScreen(
             onNavigate = { viewModel.navigateTo(it) },
             onLaunchVoice = { viewModel.setVoiceModalOpen(true) }
         )
+        AuraScreen.JARVIS_HUD -> com.example.ui.screens.JarvisHudScreen(
+            viewModel = viewModel,
+            onNavigate = { viewModel.navigateTo(it) }
+        )
         AuraScreen.CHAT -> ChatScreen(
             viewModel = viewModel,
             onLaunchVoice = { viewModel.setVoiceModalOpen(true) }
@@ -295,16 +299,16 @@ fun AuraSidebar(
             Spacer(modifier = Modifier.width(10.dp))
             Column {
                 Text(
-                    text = "AURA",
+                    text = "AURA • JARVIS",
                     color = AuraTextPrimary,
-                    fontSize = 18.sp,
+                    fontSize = 17.sp,
                     fontWeight = FontWeight.Bold,
-                    letterSpacing = 2.sp
+                    letterSpacing = 1.5.sp
                 )
                 Text(
-                    text = "AI OPERATING SYSTEM",
+                    text = "STARK AI OPERATING SYSTEM",
                     color = AuraCyan,
-                    fontSize = 9.sp,
+                    fontSize = 8.5.sp,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.Medium
                 )
@@ -348,6 +352,14 @@ fun AuraSidebar(
                     icon = Icons.Default.Home,
                     isSelected = currentScreen == AuraScreen.HOME,
                     onClick = { onNavigate(AuraScreen.HOME) }
+                )
+            }
+            item {
+                SidebarNavItem(
+                    title = "J.A.R.V.I.S. HUD",
+                    icon = Icons.Default.AutoAwesome,
+                    isSelected = currentScreen == AuraScreen.JARVIS_HUD,
+                    onClick = { onNavigate(AuraScreen.JARVIS_HUD) }
                 )
             }
             item {

@@ -1,6 +1,6 @@
 {
-  "name": "AURA",
-  "description": "Advanced Unified Reasoning Assistant - Personal AI Operating System",
+  "name": "AURA JARVIS",
+  "description": "AURA JARVIS — Personal AI Operating System & Autonomous Stark-Inspired Assistant",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

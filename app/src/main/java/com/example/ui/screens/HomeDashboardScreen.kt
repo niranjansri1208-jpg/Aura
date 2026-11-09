@@ -21,6 +21,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Memory
@@ -131,56 +132,71 @@ fun HomeDashboardScreen(
                     Spacer(modifier = Modifier.height(14.dp))
 
                     Text(
-                        text = "$greeting.\nHow can I assist your objectives?",
+                        text = "$greeting, Sir.\nHow can J.A.R.V.I.S. assist your objectives?",
                         color = AuraTextPrimary,
-                        fontSize = 22.sp,
+                        fontSize = 21.sp,
                         fontWeight = FontWeight.Bold,
-                        lineHeight = 28.sp
+                        lineHeight = 27.sp
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Text(
-                        text = "Your Intelligence. Your Device. Your Control. Multi-agent reasoning active.",
+                        text = "Mark VII Core Online • All Subsystems Nominal • Multi-Agent Protocols Standing By.",
                         color = AuraTextSecondary,
-                        fontSize = 13.sp
+                        fontSize = 12.5.sp
                     )
 
                     Spacer(modifier = Modifier.height(18.dp))
 
                     Row(
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
+                        Button(
+                            onClick = { onNavigate(AuraScreen.JARVIS_HUD) },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = AuraCyan,
+                                contentColor = AuraBackground
+                            ),
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.testTag("home_jarvis_hud_button")
+                        ) {
+                            Icon(Icons.Default.AutoAwesome, contentDescription = null, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text("JARVIS HUD", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                        }
+
                         Button(
                             onClick = {
                                 viewModel.createNewSession(AgentType.ORCHESTRATOR)
                                 onNavigate(AuraScreen.CHAT)
                             },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = AuraCyan,
-                                contentColor = AuraBackground
+                                containerColor = AuraSurfaceElevated,
+                                contentColor = AuraCyan
                             ),
                             shape = RoundedCornerShape(12.dp),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, AuraBorder),
                             modifier = Modifier.testTag("home_new_chat_button")
                         ) {
                             Icon(Icons.AutoMirrored.Filled.Chat, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("New Task", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("New Task", fontWeight = FontWeight.Medium, fontSize = 12.sp)
                         }
 
                         Button(
                             onClick = onLaunchVoice,
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = AuraSurfaceElevated,
-                                contentColor = AuraCyan
+                                contentColor = AuraElectricBlue
                             ),
                             shape = RoundedCornerShape(12.dp),
                             border = androidx.compose.foundation.BorderStroke(1.dp, AuraBorder),
                             modifier = Modifier.testTag("home_voice_mode_button")
                         ) {
                             Icon(Icons.Default.Mic, contentDescription = null, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Voice Mode", fontWeight = FontWeight.Medium, fontSize = 13.sp)
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text("Voice", fontWeight = FontWeight.Medium, fontSize = 12.sp)
                         }
                     }
                 }

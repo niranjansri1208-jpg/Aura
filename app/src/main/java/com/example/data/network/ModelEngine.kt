@@ -255,58 +255,58 @@ class ModelEngine {
         return when (agent) {
             AgentType.ORCHESTRATOR -> {
                 buildString {
-                    append("### AURA Orchestrator Analysis\n\n")
-                    append("I have evaluated your request against active system capabilities, tool registries, and memory.\n\n")
+                    append("### J.A.R.V.I.S. Core Protocol\n\n")
+                    append("At your service, Sir. I have evaluated your directive against active subsystems, tool registries, and memory.\n\n")
                     if (memories.isNotBlank()) {
-                        append("> **Active Memory Integration**: Ingested active context from local vault.\n\n")
+                        append("> **Memory Vault Synced**: Integrated active context from local Room storage.\n\n")
                     }
-                    append("#### Synthesis & Execution Plan\n")
-                    append("1. **Intent Recognition**: Identified primary objective `\"${prompt.take(45)}\"`.\n")
-                    append("2. **Agent Delegation**: Assigned specialized tasks to relevant execution pipelines.\n")
-                    append("3. **Direct Solution**:\n\n")
+                    append("#### Synthesis & Tactical Action\n")
+                    append("1. **Directive Analyzed**: `\"${prompt.take(45)}\"`.\n")
+                    append("2. **Subsystems Assigned**: Dispatched tasks to specialized local protocols.\n")
+                    append("3. **Solution**:\n\n")
                     append(synthesizeDirectAnswer(prompt))
-                    append("\n\n---\n*Orchestrated autonomously via AURA Core engine.*")
+                    append("\n\n---\n*J.A.R.V.I.S. Autonomous Matrix • All Subsystems Nominal.*")
                 }
             }
             AgentType.DEEP_RESEARCHER -> {
                 buildString {
-                    append("### Deep Research Dossier: ${prompt.take(40)}\n\n")
-                    append("**Status**: Exhaustive multi-source query synthesized.\n\n")
+                    append("### J.A.R.V.I.S. Research Dossier: ${prompt.take(40)}\n\n")
+                    append("Right away, Sir. Exhaustive multi-source query synthesized.\n\n")
                     append("#### 1. Executive Summary\n")
                     append("An in-depth review reveals significant architectural convergence around modular agent design, local LLM quantization, and zero-trust memory management.\n\n")
                     append("#### 2. Key Findings & Source Citations\n")
-                    append("- **Source [1] (OpenJarvis Core Spec)**: Distributed multi-agent swarms outperform monolithic prompt chains by 3.4x in complex multi-step reasoning.\n")
+                    append("- **Source [1] (Stark Core / OpenJarvis Spec)**: Distributed multi-agent swarms outperform monolithic prompt chains by 3.4x in complex multi-step reasoning.\n")
                     append("- **Source [2] (Local LLM Benchmarks)**: Quantized 4-bit local weights (e.g. Llama 3 8B, Mistral Nemo) achieve 92% parity with cloud FP16 endpoints on tool-calling benchmarks.\n")
                     append("- **Source [3] (Privacy Architecture)**: Device-bound SQLite Room storage prevents telemetry leakage while enabling instant semantic memory recall.\n\n")
                     append("#### 3. Strategic Recommendations\n")
-                    append("Deploy persistent workflow automations and leverage local Ollama endpoints for zero data transmission outside your perimeter.")
+                    append("Deploy persistent workflow automations and leverage local Ollama endpoints for zero data transmission outside your perimeter, Sir.")
                 }
             }
             AgentType.CODE_ASSISTANT -> {
                 buildString {
-                    append("### Code Assistant Inspection\n\n")
-                    append("Analyzing query: `${prompt.take(35)}`\n\n")
-                    append("Here is a clean, idiomatic implementation crafted for high performance:\n\n")
+                    append("### J.A.R.V.I.S. Code Analysis Protocol\n\n")
+                    append("Analyzing code parameters for: `${prompt.take(35)}`, Sir.\n\n")
+                    append("Here is the optimized, clean implementation crafted for maximum performance:\n\n")
                     append("```kotlin\n")
-                    append("// AURA Optimized Execution Unit\n")
-                    append("class AgentExecutor(private val memoryVault: MemoryVault) {\n")
-                    append("    suspend fun executeTask(objective: String): TaskResult {\n")
-                    append("        val context = memoryVault.retrieveApprovedContext(objective)\n")
+                    append("// J.A.R.V.I.S. Core Execution Unit\n")
+                    append("class JarvisProtocolExecutor(private val memoryVault: MemoryVault) {\n")
+                    append("    suspend fun executeDirective(directive: String): DirectiveResult {\n")
+                    append("        val context = memoryVault.retrieveApprovedContext(directive)\n")
                     append("        return withContext(Dispatchers.Default) {\n")
-                    append("            processPipeline(objective, context)\n")
+                    append("            processPipeline(directive, context)\n")
                     append("        }\n")
                     append("    }\n")
                     append("}\n")
                     append("```\n\n")
                     append("**Key Improvements**:\n")
-                    append("- Coroutine-based asynchronous non-blocking dispatch.\n")
-                    append("- Thread-safe dependency injection with zero memory leaks.")
+                    append("- Asynchronous non-blocking dispatch with Kotlin Coroutines.\n")
+                    append("- Thread-safe dependency injection with zero memory leaks, Sir.")
                 }
             }
             AgentType.FILE_ANALYST -> {
                 buildString {
-                    append("### File Analyst Document Summary\n\n")
-                    append("Parsed document stream associated with `\"${prompt.take(35)}\"`.\n\n")
+                    append("### J.A.R.V.I.S. Document Extraction\n\n")
+                    append("Document stream associated with `\"${prompt.take(35)}\"` parsed successfully, Sir.\n\n")
                     append("| Attribute | Extracted Value |\n")
                     append("| :--- | :--- |\n")
                     append("| Parsing Status | Completed (100%) |\n")
@@ -318,26 +318,27 @@ class ModelEngine {
             }
             AgentType.TASK_PLANNER -> {
                 buildString {
-                    append("### Task Execution Blueprint\n\n")
+                    append("### J.A.R.V.I.S. Tactical Mission Blueprint\n\n")
                     append("Objective: **${prompt}**\n\n")
                     append("- [x] **Step 1: Environmental Assessment** — Verified local parameters and tool registry status.\n")
                     append("- [ ] **Step 2: Component Synthesis** — Assemble dependencies and validate inputs.\n")
                     append("- [ ] **Step 3: Verification & Execution** — Run test suite and confirm outputs.\n")
                     append("- [ ] **Step 4: Memory Ingestion** — Store verified results into local vault.\n\n")
-                    append("Estimated effort: 3 milestones. Ready to trigger automated workflow.")
+                    append("Estimated effort: 3 milestones. Ready to proceed upon your word, Sir.")
                 }
             }
             AgentType.VOICE_ASSISTANT -> {
-                "I've processed your request regarding $prompt. All systems are operational, and local agents are ready for your next command."
+                "At your service, Sir. I have processed your request regarding $prompt. All systems are nominal and standing by."
             }
             AgentType.MONITORING_AGENT -> {
                 buildString {
-                    append("### System Telemetry Report\n\n")
-                    append("Health metrics check completed:\n")
-                    append("- **Endpoint Status**: ${if (isEndpointConnected) "Connected ($baseUrl)" else "Autonomous Local Engine (Active)"}\n")
+                    append("### J.A.R.V.I.S. Diagnostic Telemetry Scan\n\n")
+                    append("Full subsystem health scan completed, Sir:\n")
+                    append("- **Arc Reactor Core**: 100% Operational\n")
+                    append("- **Model Engine**: ${if (isEndpointConnected) "Connected to Ollama ($baseUrl)" else "Autonomous Local Engine (Active)"}\n")
                     append("- **Response Latency**: ${lastPingLatencyMs}ms\n")
                     append("- **Active Automations**: 3 registered\n")
-                    append("- **Security Perimeter**: Local-only, zero external telemetry.")
+                    append("- **Security Perimeter**: Local-only, zero telemetry leakage.")
                 }
             }
             AgentType.GENERAL_ASSISTANT -> {
@@ -349,17 +350,20 @@ class ModelEngine {
     private fun synthesizeDirectAnswer(prompt: String): String {
         val lower = prompt.lowercase()
         return when {
-            lower.contains("who are you") || lower.contains("what is aura") -> {
-                "I am **AURA** (Advanced Unified Reasoning Assistant) — your personal AI operating system. I operate with a modular multi-agent architecture inspired by OpenJarvis, featuring persistent memory, tool execution, workflow automation, and local-first privacy."
+            lower.contains("who are you") || lower.contains("what is jarvis") || lower.contains("what is aura") -> {
+                "I am **J.A.R.V.I.S.** (Just A Rather Very Intelligent System) operating on the AURA platform. I act as your personal AI operating system, coordinating multi-agent protocols, persistent memory, tool execution, and local-first intelligence. Always at your service, Sir."
+            }
+            lower.contains("diagnostics") || lower.contains("diagnostic") || lower.contains("scan") -> {
+                "Running full diagnostic scan, Sir:\n\n- **Core Matrix**: 100% Power Output\n- **Network / Endpoint**: ${if (isEndpointConnected) "Ollama ($baseUrl) • ${lastPingLatencyMs}ms" else "Autonomous Reasoner (Standby)"}\n- **Local Memory Vault**: Encrypted & Device-bound\n- **Subsystems**: All 8 Specialized Protocols Nominal."
             }
             lower.contains("time") || lower.contains("date") -> {
-                "The current system timestamp is **${java.text.SimpleDateFormat("EEEE, MMMM dd, yyyy HH:mm:ss", java.util.Locale.getDefault()).format(java.util.Date())}**."
+                "The current time is **${java.text.SimpleDateFormat("EEEE, MMMM dd, yyyy HH:mm:ss", java.util.Locale.getDefault()).format(java.util.Date())}**, Sir."
             }
             lower.contains("weather") -> {
-                "Local environmental sensors report clear conditions, 21°C (70°F), with optimal connectivity across all local subsystem channels."
+                "Local environmental sensors report clear conditions, 21°C (70°F), with barometric pressure nominal and optimal visibility, Sir."
             }
             else -> {
-                "Here is the insight regarding **$prompt**:\n\nBased on your active local configurations and memory vault, AURA coordinates specialized agents to execute this task efficiently. You can delegate to the Deep Researcher for source cross-examination, Code Assistant for architecture generation, or configure an automated trigger in the Automations hub."
+                "Here is the assessment regarding **$prompt**, Sir:\n\nBased on your active local parameters and memory vault, I have coordinated the appropriate protocols to solve this task efficiently. Shall I proceed with deep research, code analysis, or execute an automated workflow?"
             }
         }
     }

@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "AURA"
+rootProject.name = "AURA JARVIS"
 
 include(":app")

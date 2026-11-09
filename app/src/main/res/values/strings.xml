@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">AURA</string>
-    <string name="tagline">Your Intelligence. Your Device. Your Control.</string>
+    <string name="app_name">AURA JARVIS</string>
+    <string name="tagline">Just A Rather Very Intelligent System • Operating System</string>
+    <string name="protocol_nominal">All Subsystems Nominal, Sir</string>
 </resources>

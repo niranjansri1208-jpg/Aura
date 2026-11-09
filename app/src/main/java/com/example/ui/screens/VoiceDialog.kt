@@ -139,7 +139,7 @@ fun VoiceDialog(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "AURA VOICE ASSISTANT",
+                    text = "J.A.R.V.I.S. VOCAL PROTOCOL",
                     color = AuraCyan,
                     fontSize = 12.sp,
                     fontFamily = FontFamily.Monospace,
@@ -147,24 +147,24 @@ fun VoiceDialog(
                     letterSpacing = 3.sp
                 )
 
-                Spacer(modifier = Modifier.height(28.dp))
+                Spacer(modifier = Modifier.height(24.dp))
 
-                // Animated Holographic Visualizer
-                AuraVisualizer(
-                    visualizerSize = 220.dp,
+                // Arc Reactor Visualizer
+                com.example.ui.components.ArcReactorVisualizer(
+                    reactorSize = 220.dp,
                     voiceState = voiceState,
                     audioLevel = audioLevel
                 )
 
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(28.dp))
 
                 // Voice State Badge
                 val stateText = when (voiceState) {
-                    VoiceState.LISTENING -> "LISTENING... SPEAK NOW"
-                    VoiceState.PROCESSING -> "PROCESSING QUERY..."
-                    VoiceState.SPEAKING -> "AURA IS SPEAKING..."
+                    VoiceState.LISTENING -> "AWAITING DIRECTIVE, SIR..."
+                    VoiceState.PROCESSING -> "COMPUTING TACTICAL MATRIX..."
+                    VoiceState.SPEAKING -> "J.A.R.V.I.S. IS SPEAKING..."
                     VoiceState.ERROR -> "SYSTEM PAUSED"
-                    VoiceState.IDLE -> if (transcript.isNotBlank()) "STANDBY" else "TAP MIC TO SPEAK"
+                    VoiceState.IDLE -> if (transcript.isNotBlank()) "STANDBY" else "TAP CORE TO SPEAK, SIR"
                 }
 
                 val stateColor = when (voiceState) {
@@ -206,7 +206,7 @@ fun VoiceDialog(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = if (transcript.isNotBlank()) "\"$transcript\"" else (errorMessage ?: "Say something or ask any multi-agent task..."),
+                        text = if (transcript.isNotBlank()) "\"$transcript\"" else (errorMessage ?: "Awaiting your directive, Sir... Tap the Arc Core to speak."),
                         color = if (transcript.isNotBlank()) AuraTextPrimary else AuraTextSecondary,
                         fontSize = 14.sp,
                         textAlign = TextAlign.Center,

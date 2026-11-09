@@ -34,6 +34,7 @@ import java.util.UUID
 
 enum class AuraScreen(val title: String) {
     HOME("Home"),
+    JARVIS_HUD("J.A.R.V.I.S. HUD"),
     CHAT("AI Chat"),
     RESEARCH("Deep Research"),
     AGENTS("Agents Hub"),
